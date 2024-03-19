@@ -1,0 +1,6 @@
+<ul class="nav">
+  <li><a routerLink="/">Home</a></li>
+  <li><a routerLink="/products">Products</a></li>
+  <li *ngIf="!isUserLoggedIn()"><a routerLink="/login">Login</a></li>
+  <li *ngIf="isUserLoggedIn()"><a (click)="onLogout()">Logout</a></li>
+</ul>
